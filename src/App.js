@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import './App.css';
+import Banks from './components/Banks/Banks'
+import CountMortgage from './components/CountMortgage/CountMortgage'
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Header />
+        <Navbar />
+        <div className="wrapper-content">
+          <Routes>
+            <Route path="banks/*" element={<Banks />}
+            />
+            <Route path="/countmortgage/*" element={<CountMortgage />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
