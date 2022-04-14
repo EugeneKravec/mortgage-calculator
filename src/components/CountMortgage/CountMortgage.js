@@ -1,7 +1,8 @@
+import MortgageCalculator from "mortgage-calculator-react";
 const CountMortgage = () => {
     return (
         <div>
-            svmsjkvks
+            <MortgageCalculator />
         </div>
     )
 }
