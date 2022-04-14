@@ -1,7 +1,10 @@
+import Table from "../Table/Table";
+
 const Banks = () => {
     return (
         <div>
-            Ltyjdtmghjyukmyffukfykfkyufkyf
+            <Table />
+
         </div>
     )
 }
